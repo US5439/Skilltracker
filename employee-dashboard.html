@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard - SkillTracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- ✅ Header -->
+  <header class="bg-green-600 text-white py-6 shadow">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Employee Dashboard</h1>
+      <p class="mt-2 text-lg">Track Your Monthly Skills & Performance</p>
+    </div>
+  </header>
+
+  <!-- ✅ Dashboard Content -->
+  <main class="flex-grow container mx-auto px-4 py-10">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+
+      <!-- ✅ Performance Overview -->
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">This Month's Performance</h2>
+        <ul class="list-disc pl-6 text-gray-700">
+          <li>Completed 3 major projects</li>
+          <li>Attended 2 training sessions</li>
+          <li>Improved coding speed by 15%</li>
+          <li>Client satisfaction score: 92%</li>
+        </ul>
+      </section>
+
+      <!-- ✅ Feedback & Improvement -->
+      <section>
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Manager Feedback</h2>
+        <p class="text-gray-700 mb-6">
+          Keep improving your time management and continue participating in upcoming training programs.
+        </p>
+        <!-- ✅ Button to Employee Skill Test Page -->
+        <div class="flex justify-center">
+          <a href="employee-skill-test.html" class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700 transition">
+            Take Monthly Skill Test
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-gray-200 text-center text-gray-600 py-4 text-sm">
+    &copy; 2025 SkillTracker. All rights reserved.
+  </footer>
+
+</body>
+</html>

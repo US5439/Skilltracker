@@ -1,0 +1,68 @@
+   <!DOCTYPE html>
+<html lang="="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillTracker - All-in-One Hiring & Employee Management</title>
+  <!-- ✅ Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- ✅ Header Section -->
+  <header class="bg-blue-600 text-white py-6 shadow">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold">SkillTracker</h1>
+      <p class="mt-2 text-lg">Smarter Hiring & Employee Performance Tracking</p>
+    </div>
+  </header>
+
+  <!-- ✅ Main Section -->
+  <main class="flex-grow container mx-auto px-4 py-10">
+    
+    <!-- ✅ Job Applicants Section -->
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold mb-6 text-gray-800 text-center">
+        Apply For A Job Role
+      </h2>
+      <form>
+        <label class="block mb-3 text-gray-700 font-medium">Select a Role:</label>
+        <select class="w-full p-3 border rounded mb-6">
+          <option>Web Developer</option>
+          <option>Graphic Designer</option>
+          <option>Digital Marketer</option>
+          <option>Content Writer</option>
+        </select>
+
+        <a href="skill-test.html">
+            <button type="button" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">
+          Start Skill Test
+        </button>
+        </a>
+      </form>
+    </div>
+
+    <!-- ✅ Employee Dashboard Section -->
+    <section class="mt-10 bg-white p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold mb-4 text-gray-800 text-center">
+        For Company Employees
+      </h2>
+      <p class="mb-6 text-gray-700 text-center">
+        Track your skills and performance monthly. Stay ready for promotions and training!
+      </p>
+      <div class="flex justify-center">
+        <a href="employee-dashboard.html" class="bg-green-600 text-white py-3 px-6 rounded hover:bg-green-700 transition">
+          Go to Employee Dashboard
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✅ Footer Section -->
+  <footer class="bg-gray-200 text-center text-gray-600 py-4 text-sm">
+    &copy; 2025 SkillTracker. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Test - SkillTracker</title>
+  <!-- ✅ Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- ✅ Header -->
+  <header class="bg-blue-600 text-white py-6 shadow">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Skill Test</h1>
+      <p class="mt-2 text-lg">Answer the following questions carefully</p>
+    </div>
+  </header>
+
+  <!-- ✅ Test Form -->
+  <main class="flex-grow container mx-auto px-4 py-10">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <form id="skillTestForm">
+        <!-- Question 1 -->
+        <div class="mb-6">
+          <label class="block mb-2 font-medium text-gray-700">1. Describe your strongest skill and how you learned it.</label>
+          <textarea class="w-full border p-3 rounded" rows="3" required></textarea>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="mb-6">
+          <label class="block mb-2 font-medium text-gray-700">2. Explain a project or task where you solved a big problem.</label>
+          <textarea class="w-full border p-3 rounded" rows="3" required></textarea>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="mb-6">
+          <label class="block mb-2 font-medium text-gray-700">3. How do you improve your skills regularly?</label>
+          <textarea class="w-full border p-3 rounded" rows="3" required></textarea>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="mb-6">
+          <label class="block mb-2 font-medium text-gray-700">4. What tools or technologies are you most confident in?</label>
+          <textarea class="w-full border p-3 rounded" rows="3" required></textarea>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="mb-6">
+          <label class="block mb-2 font-medium text-gray-700">5. Why should we consider you for this role?</label>
+          <textarea class="w-full border p-3 rounded" rows="3" required></textarea>
+        </div>
+
+        <!-- ✅ Submit Button -->
+        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700 transition">
+          Submit Test
+        </button>
+      </form>
+
+      <!-- ✅ Success Message -->
+      <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded text-center">
+        Test submitted successfully! Thank you.
+      </div>
+
+      <!-- ✅ Cheating Warning -->
+      <div id="cheatingWarning" class="hidden mt-6 p-4 bg-red-100 text-red-800 rounded text-center">
+        Cheating detected! Test ended automatically.
+      </div>
+    </div>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-gray-200 text-center text-gray-600 py-4 text-sm">
+    &copy; 2025 SkillTracker. All rights reserved.
+  </footer>
+
+  <!-- ✅ Simple Script (for demo, not backend) -->
+  <script>
+    const form = document.getElementById('skillTestForm');
+    const successMessage = document.getElementById('successMessage');
+    const cheatingWarning = document.getElementById('cheatingWarning');
+    let cheatingCount = 0;
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+    });
+
+    // ✅ Anti-cheating: Detect tab switching
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cheatingCount++;
+        if (cheatingCount >= 2) { // Allow 1 mistake, warn on 2nd switch
+          form.classList.add('hidden');
+          cheatingWarning.classList.remove('hidden');
+        } else {
+          alert('Warning! Switching tabs is not allowed during the test.');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
